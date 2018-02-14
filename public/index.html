@@ -9,14 +9,16 @@
   <title>Document</title>
 </head>
 <body>
-  <section class="container-fluid">
-    <div>
-      <h1>Hola usuario!</h1>
+  <section class="container d-flex flex-column align-items-center">
+    <div class="index-section mx-3">
+      <h1 class="text-center">Hola usuario!</h1>
       <p>Realizamos la búsqueda de noticias por medio de la tecnología AJAX.</p>
       <p>Puedes escojer entre estos dos métodos para realizar tu búsqueda</p> 
       <p>Disfruta!</p>
-      <a class="btn btn-warning" href="views/xhr.html" role="button">XHR</a>
-      <a class="btn btn-info" href="views/fetch.html" role="button">FETCH</a>
+      <div class="text-center">
+        <a class="btn btn-warning index-btn" href="views/xhr.html" role="button">XHR</a>
+        <a class="btn btn-info index-btn" href="views/fetch.html" role="button">FETCH</a>
+     </div>
     </div>
   </section>
 

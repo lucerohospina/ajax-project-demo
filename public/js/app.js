@@ -3,6 +3,7 @@ const searchField = document.getElementById('search-keyword');
 const responseContainer = document.getElementById('response-container');
 let searchForText;
 
+// aplicando ajax con xhr
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   responseContainer.innerHTML = '';
@@ -23,15 +24,26 @@ function handleError() {
 }
 
 function addNews() {
-  const data = JSON.parse(this.responseText);
+  let data = JSON.parse(this.responseText);
   console.log(data);
-  const article = data.response.docs[0];
-  const title = article.headline.main;
-  const snippet = article.snippet;
-  
-  let li = document.createElement('li');
-  li.className = 'articleClass';
-  li.innerText = snippet;
-  
-  responseContainer.appendChild(li);
-}
+  console.log('algo');
+  let output = '';
+  for (i = 0; i < data.response.docs.length; i++) {
+    console.log(data.response.docs[i]);
+    const title = data.response.docs[i].headline.main;
+    console.log(title);
+    const link = data.response.docs[i].uri;
+    const snippet = data.response.docs[i].snippet;
+
+    output += `
+    <div class="card my-3">
+    <div class="card-body">
+      <h5 class="card-title">${title}</h5>
+      <p class="card-text">${snippet}</p>
+      <a href="#" class="card-link">${link}</a>
+    </div>
+  </div>
+    `;
+    responseContainer.innerHTML = output;
+  };
+};
