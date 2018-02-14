@@ -1,4 +1,5 @@
-const form = document.getElementById('search-form');
+const form = document.getElementById('xhr-search-form');
+const form2 = document.getElementById('fetch-search-form');
 const searchField = document.getElementById('search-keyword');
 const responseContainer = document.getElementById('response-container');
 let searchForText;
@@ -21,18 +22,20 @@ function getNews() {
 
 function handleError() {
   console.log('se ha presentado un error');
+  let paragraph = document.createElement('p');
+  paragraph.innerText = 'Lo sentimos, ha ocurrido un error';
+  responseContainer.appendChild(paragraph);
 }
 
 function addNews() {
   let data = JSON.parse(this.responseText);
   console.log(data);
-  console.log('algo');
   let output = '';
   for (i = 0; i < data.response.docs.length; i++) {
     console.log(data.response.docs[i]);
     const title = data.response.docs[i].headline.main;
     console.log(title);
-    const link = data.response.docs[i].uri;
+    const link = data.response.docs[i].web_url;
     const snippet = data.response.docs[i].snippet;
 
     output += `
