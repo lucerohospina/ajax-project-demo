@@ -5,26 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900|Ubuntu:400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <title>Document</title>
 </head>
-<body>
-  <header class="container masthead">
-    <h1>Qué te interesa hoy</h1>
-    <div class="site-container">
+<body class="bg-light">
+  <a type="button" class="btn btn-lg go-back-btn mt-2 ml-2" href="../index.html">INICIO</a>
+  <header class="container mt-5">
+    <h1 class="titles-font">¿Qué te interesa hoy?</h1>
+    <div class="site-container my-5">
       <form id="fetch-search-form">
-        <label for="search-keyword" class="visuallyhidden">Qué buscamos</label>
-        <!-- <input id="search-keyword" type="text" name="search-keyword" placeholder="key word" required> -->
-        <div class="input-group mb-3">
+        <div class="input-group input-group-lg mb-3">
           <input type="text" id="search-keyword" class="form-control" placeholder="key word" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>
-        <!-- <button id="submit-btn">Submit</button> -->
-        <button id="submit-btn" class="btn btn-outline-success">Success</button>
+        <button id="submit-btn" class="btn btn-info btn-lg font-weight-bold">BUSCAR</button>
       </form>
     </div>
   </header>
 
-  <section id="response-container" class="container">
+  <section id="response-container" class="container pt-4">
         
   </section>
   

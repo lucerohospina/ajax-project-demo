@@ -1,5 +1,4 @@
 const form = document.getElementById('xhr-search-form');
-const form2 = document.getElementById('fetch-search-form');
 const searchField = document.getElementById('search-keyword');
 const responseContainer = document.getElementById('response-container');
 let searchForText;
